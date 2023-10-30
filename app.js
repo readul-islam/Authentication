@@ -4,10 +4,13 @@ const cors = require("cors");
 const ejs = require("ejs");
 const appRoutes = require("./routes/index");
 const path = require("path");
-const Database = require("./db/index");
+const Database = require("./config/database");
 const passport = require("passport");
 const session = require("express-session");
 const MongoStore = require('connect-mongo');
+require('dotenv').config();
+
+
 
 
 
@@ -27,7 +30,7 @@ app.use(
     resave: false,
     saveUninitialized: true,
     store: MongoStore.create({
-      mongoUrl:process.env.MONG_URL,
+      mongoUrl:process.env.MONGO_URL,
       collectionName:"sessions",
     })
     // cookie: { secure: true }
@@ -47,5 +50,6 @@ app.get("/", (req, res) => {
 app.get("*", (req, res) => {
   res.render("notFound");
 });
+
 
 module.exports = app;

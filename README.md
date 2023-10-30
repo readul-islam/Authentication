@@ -1,4 +1,4 @@
-# Node + Express + EJS + Tailwind CSS Starter Template
+# Node + Express + EJS + Tailwind + Multilevel Authentication
 
 The intention of this project is how to create app using Node.js + Express.js + EJS + Tailwind css
 
@@ -8,6 +8,7 @@ The intention of this project is how to create app using Node.js + Express.js + 
 - [Express.js](https://expressjs.com/)
 - [EJS](https://ejs.co/)
 - [Tailwind CSS](https://tailwindcss.com/)
+- [Authentication](https://passport.com/)
 
 # Requirements
 
